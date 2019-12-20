@@ -1,0 +1,57 @@
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+    
+int tahun(int w){
+    return(w/8064);}
+int bulan(int w){
+    int a,b;
+    a=w%8064;
+    b=a/672;
+    return(b);
+    }
+int minggu(int w){ 
+    int h,b;
+    h=w%672;
+    b=h/168;
+    return(b); 
+    } 
+int hari(int w){ 
+    int a,h;
+    a=w%168;
+    h=a/24;
+    return(h);
+     } 
+int jam(int w){ 
+    int a;
+    a=w%24;
+     return(a);
+  }
+
+int main(){
+int w;
+char k;
+    
+    lagi :
+    cout<<"Venominz.com\n========================================\n";
+    cout<<"KONVERSI JAM KE TAHUN MENGGUNAKAN FUNGSI\n";
+    cout<<"========================================\n\n";
+   
+    
+cout<<"masukan jumlah jam : ";
+cin>>w;
+    cout<<"\n\nHasilnya setara dengan\n";
+cout<<endl<<tahun(w)<<" tahun\n"<<bulan(w)<<" bulan\n"<<minggu(w)<<" minggu\n"<<hari(w)<<" hari\n"<<jam(w)<<" jam\n\n";
+    
+    cout<<"Hitung lagi ? (y/t) ";
+    cin>>k;
+    
+    if(k=='Y'||k=='y'){
+    system("clear");
+        goto lagi;
+}
+    else{
+        cout<<"\n\t     --TERIMAH KASIH--";
+    }
+    
+}
